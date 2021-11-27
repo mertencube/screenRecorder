@@ -4,7 +4,11 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
-.settingsBtn
+#optionBtns
 {
-  margin-left: 100px;
+  margin-left: 0px;
+}
+.screen
+{
+  border: 100px solid green ;
 }

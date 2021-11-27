@@ -10,24 +10,31 @@
     />
     <link rel="stylesheet" href="index.css" />
     <script defer src="render.js"></script>
+    <script defer src="features.js"></script>
   </head>
   <body class="content">
-    <h1>Screen</h1>
+    <h1>de prachtige screenrecorder</h1>
+    
 
-    <video></video>
-
-    <button id="startBtn" class="button is-primary">Start</button>
-    <button id="pauseBtn" class="button is-primary">pause</button>
-    <button id="stopBtn" class="button is-warning">Stop</button>
-    <button id="resumeBtn" class="button is-info">resume</button>
+    <video id="screen" width="1800" height="1600"></video>
+    
+    <div id="optionBtns">
+     <center>
+      <button id="startBtn" class="button is-primary Btn">Start</button>
+      <button id="pauseBtn" class="button is-primary Btn">pause</button>
+      <button id="stopBtn" class="button is-warning Btn">Stop</button>
+      <button id="resumeBtn" class="button is-info Btn">resume</button>
     
     
-    <button id="settingsBtn" class="button is-info" href="settings.html">settings</button>
-
-    <hr />
+      <button id="settingsBtn" class="button is-info Btn">settings</button>
+    </center>
+  </div>
+  
+    
 
     <button id="videoSelectBtn" class="button is-text">
       Choose a Video Source
     </button>
+   
   </body>
 </html>

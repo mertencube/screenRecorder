@@ -91,8 +91,7 @@ async function selectSource(source) {
     //register Event Handlers
     mediaRecorder.ondataavailable = handleDataAvailable;
     mediaRecorder.onstop = handleStop;
-    mediaRecorder.pause = handlePause;
-    mediaRecorder.resume = handleResume;
+
 }
 
 //Captures all recorded chunks
