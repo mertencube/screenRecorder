@@ -1,14 +1,22 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
-}
+
 #optionBtns
 {
-  margin-left: 0px;
+  padding-top: 10px;
+  margin-left: 800px;
 }
-.screen
+#VideoScreenBorder
 {
-  border: 100px solid green ;
+  width: 1000px;
+  height: 600px;
+}
+#videoScreen
+{
+  border: 5px solid black;
+  width: 1000px;
+  height: 600px;
+  margin-left: 450px;
+}
+#videoSelectBtn
+{
+  margin-left: 450px;
 }

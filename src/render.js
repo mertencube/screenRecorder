@@ -67,7 +67,7 @@ const recordedChunks = [];
 async function selectSource(source) {
     videoSelectBtn.innerText = source.name;
 
-    const constraints = {
+    const constraintsVideo = {
         audio: false,
         video: {
             mandatory: {
@@ -76,17 +76,23 @@ async function selectSource(source) {
             }
         }
     };
+    const constraintsAudio = {audio: true}
+
 
     //create a Stream
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    const audioStream = await navigator.mediaDevices.getUserMedia(constraintsAudio)
+    const videoStream = await navigator.mediaDevices.getUserMedia(constraintsVideo);
+    
+    // combine the streams 
+    const combinedStream = new MediaStream([...videoStream.getVideoTracks(), ...audioStream.getAudioTracks()])
 
     //preview the source in a video element
-    videoElement.srcObject = stream;
+    videoElement.srcObject = combinedStream;
     videoElement.play();
 
     // Create media Recorder
     const options = { mimeType: 'video/webm; codecs=vp9'};
-    mediaRecorder = new MediaRecorder(stream, options);
+    mediaRecorder = new MediaRecorder(combinedStream, options);
 
     //register Event Handlers
     mediaRecorder.ondataavailable = handleDataAvailable;
