@@ -14,7 +14,7 @@ const startBtn = document.getElementById('startBtn');
 
 startBtn.onclick = e => {
   mediaRecorder.start();
-  startBtn.classList.add('is-danger');
+  startBtn.classList.add('btn-danger');
   startBtn.innerText = 'Recording...';
 };
 
@@ -22,7 +22,7 @@ const stopBtn = document.getElementById('stopBtn');
 
 stopBtn.onclick = e => {
   mediaRecorder.stop();
-  startBtn.classList.remove('is-danger');
+  startBtn.classList.remove('btn-danger');
   startBtn.innerText = 'Start';
 };
 
@@ -30,15 +30,16 @@ const pauseBtn = document.getElementById('pauseBtn')
 
 pauseBtn.onclick = e => {
     mediaRecorder.pause();
-    pauseBtn.classList.add('is-danger');
+    pauseBtn.classList.add('btn-danger');
     pauseBtn.innerText = 'paused';
+    resumeBtn.innerText = 'resume...'; 
 }
 
 const resumeBtn = document.getElementById('resumeBtn')
 
 resumeBtn.onclick = e => {
     mediaRecorder.resume();
-    pauseBtn.classList.remove('is-danger');
+    pauseBtn.classList.remove('btn-danger');
     pauseBtn.innerText = 'pause';
 }
 
@@ -88,6 +89,7 @@ async function selectSource(source) {
 
     //preview the source in a video element
     videoElement.srcObject = combinedStream;
+    videoElement.muted = true;
     videoElement.play();
 
     // Create media Recorder

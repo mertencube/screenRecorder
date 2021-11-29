@@ -3,45 +3,44 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World!</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css" />
     <script defer src="render.js"></script>
     <script defer src="features.js"></script>
   </head>
   <body class="content">
-    <h1>de prachtige screenrecorder</h1>
-    
-    <div id="screen">
-     <div id="videoScreen">
-      <video id="VideoScreenBorder"></video>
-     </div>
-    </div>
+    <h1 id="headText">Screen Recorder</h1>
+      <div id="midScreen">
+        <div id="screen" class="column">
+          <div id="videoScreen">
+          <video id="VideoScreenBorder"></video>
+          </div>
+        </div>
 
 
-    <div id="optionBtns">
-     
-      <button id="startBtn" class="button is-primary Btn">Start</button>
-      <button id="pauseBtn" class="button is-primary Btn">pause</button>
-      <button id="resumeBtn" class="button is-info Btn">resume</button>
-      <button id="stopBtn" class="button is-warning Btn">Stop</button>
-      
-    
-      <button id="settingsBtn" class="button is-info Btn">settings</button>
-    
-  </div>
+        <div id="optionBtns">
+          
+          <button id="startBtn" type="button" class="btn btn-primary">Start</button>
+          <button id="pauseBtn" type="button" class="btn btn-info">pause</button>
+          <button id="resumeBtn" type="button" class="btn btn-info">resume</button>
+          <button id="stopBtn" type="button" class="btn btn-warning">Stop</button>
+          
+
+          <button id="settingsBtn">settings</button>
+
+        </div>
+
+
+
+        <button id="videoSelectBtn" type="button" class="btn btn-link">
+          Choose a Video Source
+        </button>
+      </div>
+        
   
-    
-
-    <button id="videoSelectBtn" class="button is-text">
-      Choose a Video Source
-    </button>
-   
-    <button id="audioSelectBtn" class="button is-text">
-      Choose an Audio Source
-    </button>
   </body>
 </html>

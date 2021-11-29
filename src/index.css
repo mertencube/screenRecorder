@@ -1,22 +1,49 @@
+.content
+{
+  background-color: white;
+  width: 1920px;
+  height: 1080px;
+  size: auto;
+}
+
 
 #optionBtns
 {
   padding-top: 10px;
   margin-left: 800px;
+  size: auto;
 }
 #VideoScreenBorder
 {
   width: 1000px;
   height: 600px;
+  size: auto;
 }
 #videoScreen
 {
   border: 5px solid black;
-  width: 1000px;
-  height: 600px;
+  width: 1010px;
+  height: 610px;
   margin-left: 450px;
+  size: auto;
 }
 #videoSelectBtn
 {
   margin-left: 450px;
+  size: auto;
+  color: grey;
+}
+#videoSelectBtn:hover
+{
+  background-color: black;
+}
+#midScreen
+{
+  margin-top: 100px;
+}
+#headText
+{
+  color: black;
+  margin-top: 50px;
+  margin-left: 800px;
 }
